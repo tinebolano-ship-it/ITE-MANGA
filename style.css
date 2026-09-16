@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #FAF6F0;
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #194865;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #EAE1D8;
+}
+
+.navbar h1 {
+    color: #2D2A32;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #E05A47;
+}
+
+/* HERO */
+.hero {
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, #F3E5D8 0%, #FAF6F0 100%);
+    padding: 80px 20px 60px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 16px;
+    color: #8C2F39;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #554D5A;
+    margin-bottom: 30px;
+}
+
+.hero-content button {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #E05A47 0%, #C84B31 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(224, 90, 71, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-content button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(224, 90, 71, 0.45);
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 80px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #EAE1D8;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #8C2F39;
+}
+
+.about-content p {
+    color: #554D5A;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+/* STORIES SECTION */
+.stories {
+    padding: 60px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stories h2 {
+    font-size: 36px;
+    color: #8C2F39;
+}
+
+.section-description {
+    margin-top: 8px;
+    margin-bottom: 40px;
+    color: #6C6377;
+}
+
+/* STORY GRID */
+.story-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* STORY CARD */
+.story-card {
+    /* Soft warm tint for card backgrounds */
+    background-color: #F3ECE4;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid #E5DCD3;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    border-color: #D3C2B3;
+}
+
+.story-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.story-card h3 {
+    font-size: 20px;
+    margin: 20px 20px 10px;
+    color: #8C2F39;
+}
+
+.story-card p {
+    font-size: 14px;
+    color: #554D5A;
+    margin: 0 20px 20px;
+    flex-grow: 1;
+}
+
+.story-card button {
+    margin: 0 20px 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #E05A47 0%, #C84B31 100%);
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.2s ease;
+}
+
+.story-card button:hover {
+    opacity: 0.9;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .hero-content h2, .stories h2, .about-content h2 {
+        font-size: 30px;
+    }
+
+    .stories {
+        padding: 40px 20px;
+    }
+}
